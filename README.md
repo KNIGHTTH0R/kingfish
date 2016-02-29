@@ -6,10 +6,10 @@ TODO
 
 - make website	
  - users
- - homepage
- - menu
- - events
-- mike
- - change menu
- - do event handling
+  - homepage
+  - menu
+  - events
+ - mike
+  - change menu
+  - do event handling
 
