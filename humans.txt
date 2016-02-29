@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-    Samuel Lichlyter -- Developer -- twitter: @slichlyter12
+    <name> -- <role> -- <twitter> -- <email> 
+    Samuel Lichlyter -- Developer -- @slichlyter12 
+    Cramer Smith -- Developer -- @TheCmar7 -- cramer.s.smith@gmail.com
 
 # THANKS
-
     <name>
 
 # TECHNOLOGY COLOPHON
@@ -15,5 +15,4 @@
     HTML5, CSS3
     jQuery
     Bootstrap
-    
     
