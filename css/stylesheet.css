@@ -1,0 +1,21 @@
+body {
+	background-color: white;
+	font-family: "helvetica"
+}
+
+h1 {
+	text-align: center;
+
+}
+
+img {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+p {
+	text-align: center;
+	font-size: 15px;
+	font-family: "helvetica"
+}
