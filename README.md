@@ -45,6 +45,11 @@ Design pallete
 --------------
 - red orange
 - darker
+ + GRAPHICS NEEDS - ERIC
+ =======
+  -Flavicon
+  -Pictures
+  -Logos
 
 Documentaions needed
 --------------------
