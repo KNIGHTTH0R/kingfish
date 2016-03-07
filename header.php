@@ -24,9 +24,9 @@
 				<div class="collapse navbar-collapse" id="site-menu">
 					<ul class="nav navbar-nav navbar-right" id="site-menu">
 					<!-- <li><a href="#">About</a></li> -->
-					<li><a href="bites.php">Bites</a></li>
-					<li><a href="cocktails.php">Coctails</a></li>
-					<li><a href="neighborhood.php">Neighborhood</a></li>
+					<li class="menu-button"><a href="bites.php">Bites</a></li>
+					<li class="menu-button"><a href="cocktails.php">Coctails</a></li>
+					<li class="menu-button"><a href="neighborhood.php">Neighborhood</a></li>
 				</ul>
 			</div>
 		</div>
