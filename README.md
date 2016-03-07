@@ -45,7 +45,8 @@ Design Palette
 --------------
 - red orange
 - darker
-Graphics - Eric
+
+Graphics
 --------------
 - [ ] Favicon
 - [ ] Pictures
