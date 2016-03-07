@@ -15,7 +15,8 @@ TODO
 REQUIREMENTS
 ------------
 - [ ] map - location ([MapBox](http://mapbox.com))
-- [x] menu: Cocktails, bites, neighborhood(?) 
+- [x] menu: Cocktails, bites, neighborhood
+    - [ ] borders around buttons? 
 - [ ] neighborhood:	show locations of other sites that around the vicinity
 - [ ] contact info
     - [ ] email: 
