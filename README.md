@@ -3,57 +3,57 @@ Website built for Kingfish lounge in Corvallis, OR
 
 TODO
 ====
-* make website	
- + users
-  - homepage
-  - menu
-  - events
- + mike
-  - change menu
-  - do event handling
+- [ ] make website
+    - [ ] users
+        - [ ] homepage
+        - [ ] menu (cocktails, bites)
+        - [ ] events
+    - [ ] Mike
+        - [ ] change menu
+        - [ ] do event handling
 
 REQUIREMENTs
 ------------
-- we need the map - location
-- menu: Cocktails, bites, neighborhood(?) 
-- neighborhood:	show locations of other sites that around the vacinity
-- contact info
- + email: 
- + phone:
- + address:
-- pictures of space
-- hours:
-- Set google profile
-- Update menu System
- + Set up database
- + log in system
- + DBMS
-- event form
- + ? Event news/blog thing
+- [ ] map - location ([MapBox](http://mapbox.com))
+- [x] menu: Cocktails, bites, neighborhood(?) 
+- [ ] neighborhood:	show locations of other sites that around the vicinity
+- [ ] contact info
+    - [ ] email: 
+    - [ ] phone:
+    - [ ] address:
+- [ ] pictures of reservation space
+- [ ] hours:
+- [ ] Set google profile
+- [ ] Update menu System
+    - [ ] Set up database
+    - [ ] log in system
+    - [ ] DBMS
+- [ ] event form
+- [ ] Event news/blog thing (MAYBE)
  
-website
+Website Info
 -------
 - kingfishlounge.com
- + dreamhost 
+    - dreamhost 
 
-GOLD PLATING
+Gold Plating
 ------------
 - animation
 - Instagram
 
-Design pallete
+Design Palette
 --------------
 - red orange
 - darker
- + GRAPHICS NEEDS - ERIC
- =======
-  -Flavicon
-  -Pictures
-  -Logos
+Graphics - Eric
+--------------
+- [ ] Favicon
+- [ ] Pictures
+- [ ] Logos
 
-Documentaions needed
+Documentation
 --------------------
-- Directions to change pictures 
-- directions to change logo
-- Directions to update menu 
+- [ ] Directions to change pictures 
+- [ ] Directions to change logo
+- [ ] Directions to update menu 
 
