@@ -12,7 +12,7 @@ TODO
         - [ ] change menu
         - [ ] do event handling
 
-REQUIREMENTs
+REQUIREMENTS
 ------------
 - [ ] map - location ([MapBox](http://mapbox.com))
 - [x] menu: Cocktails, bites, neighborhood(?) 
