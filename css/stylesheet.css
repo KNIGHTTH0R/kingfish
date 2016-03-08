@@ -1,11 +1,13 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	height: 100%;
 }
 
 body {
 	color: white;
-	font-family: "helvetica"
+	font-family: "Gill Sans", sans-serif;
 }
 
 h1 {
@@ -25,11 +27,11 @@ p {
 }
 
 .collapsed {
-	border-color: #337ab7;
+	border-color: #cb3737;
 }
 
 .icon-bar {
-	background-color: #337ab7;
+	background-color: #cb3737;
 }
 
 #background-video {
@@ -37,30 +39,40 @@ p {
 	z-index: 0;
 }
 
+.navbar-nav {
+	font-weight: 600;
+}
+
 .navbar-brand, .navbar-nav li a {
 	text-shadow: none;
 }
 
 .navbar a {
-	color: #741d13;
+/* 	color: #741d13; */
+	color: #cb3737;
 }
 
 .nav li a:hover {
 	background-color: rgba(145, 31, 31, 0.24);
 }
 
-.videoContainer {
-	position: relative;
+.navbar {
+/* 	background-color: rgba(255,  255,  255, 0.40); */
+	border-radius: 0;
+}
+
+.imageContainer {
+	position: fixed;
 	top: -75px;
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 	overflow: hidden;
 	background: #2c1b0b;
 	z-index: -10;
 }
 
-video {
+#landingImage {
 	opacity: 0.70;
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 }
