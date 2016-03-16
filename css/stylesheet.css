@@ -47,9 +47,13 @@ p {
 	text-shadow: none;
 }
 
-.navbar a {
+a {
 /* 	color: #741d13; */
 	color: #cb3737;
+}
+
+a:hover {
+	color: #8d2121;
 }
 
 .nav li a:hover {
