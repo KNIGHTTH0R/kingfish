@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 <body>
+	<!-- nav bar -->
 	<nav class="navbar navbar-transparent">
 		<div class="container-fluid">
 			<div class="navbar-header">
