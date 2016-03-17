@@ -14,16 +14,10 @@ h1 {
 	text-align: center;
 }
 
-img {
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-}
-
 p {
 	text-align: center;
 	font-size: 15px;
-	font-family: "helvetica"
+	font-family: "helvetica";
 }
 
 .collapsed {
@@ -73,6 +67,7 @@ a:hover {
 	overflow: hidden;
 	background: #2c1b0b;
 	z-index: -10;
+	left: 0px;
 }
 
 #landingImage {
@@ -80,3 +75,33 @@ a:hover {
 	width: auto;
 	height: 100%;
 }
+
+/***************** FOOTER *******************/
+
+#footer {
+	text-align: center;
+	bottom: -60%;
+	position: relative;
+}
+
+#footer ul li {
+	display: inline;
+/* 	list-style: none; */
+}
+
+#footer #hours ul {
+	margin: 0;
+	padding: 0;
+}
+
+#footer #hours #all-hours {
+	display: none;
+}
+
+#footer #hours #todays-hours {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
