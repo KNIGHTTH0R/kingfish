@@ -1,3 +1,4 @@
+<?php require_once 'dbconnect.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,9 +27,10 @@
 					<ul class="nav navbar-nav navbar-right" id="site-menu">
 					<!-- <li><a href="#">About</a></li> -->
 					<li class="menu-button"><a href="bites.php">Bites</a></li>
-					<li class="menu-button"><a href="cocktails.php">Coctails</a></li>
+					<li class="menu-button"><a href="cocktails.php">Cocktails</a></li>
 					<li class="menu-button"><a href="neighborhood.php">Neighborhood</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+	<div class="content container">

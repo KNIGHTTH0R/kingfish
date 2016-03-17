@@ -10,7 +10,7 @@
 
 	function getdbc() {
 		$dbhost = 'mysql.kingfishcorvallis.com'; 
-		$dbname = 'kingfishloung';
+		$dbname = 'kingfishlounge';
 		$dbuser = 'kingfishlounger@ip-208-113-156-25.dreamhost.com';
 		$dbpass = 'squirrelfish5!~';
 		
