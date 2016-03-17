@@ -16,9 +16,9 @@
 	<div id="contact_info">
 		<h2> Contact Info: </h2>
 		<ul class="contacting_info">
-			<li> Phone: <a href="tel:5417530787">541-753-0787</a></li>
-			<li> Address: <a href="https://www.google.com/maps/place/151+NW+Monroe+Ave+%23107,+Corvallis,+OR+97330/@44.5641493,-123.2611558,17z/data=!3m1!4b1!4m2!3m1!1s0x54c040eb824139e9:0xf6460850f090980">151 NW Monroe Ave Suite 107</a></li>
-			<li> Email: <a href="mailto:michael.monroe@kingfishcorvallis.com">michael.monroe@kingfishcorvallis.com</a></li>
+			<li> Phone: 541-753-0787 </li>
+			<li> Address: 151 NW Monroe Ave Suite 107 </li>
+			<li> Email: _______@email.com</li>
 		</ul>
 	</div>
 
