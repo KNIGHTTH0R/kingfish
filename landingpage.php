@@ -1,5 +1,5 @@
-<!-- header.php: <html> <head> <body> -->
 <?php include_once 'header.php'; ?>
+<!-- header.php: <html> <head> <body> -->
 
 	<div class="imageContainer">
 		<img id="landingImage" src="img/lights.png">
