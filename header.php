@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php require_once 'dbconnect.php'; ?>
 <!DOCTYPE html>
 <html>
@@ -26,8 +27,8 @@
 				<div class="collapse navbar-collapse" id="site-menu">
 					<ul class="nav navbar-nav navbar-right" id="site-menu">
 					<!-- <li><a href="#">About</a></li> -->
-					<li class="menu-button"><a href="bites.php">Bites</a></li>
-					<li class="menu-button"><a href="cocktails.php">Cocktails</a></li>
+					<li class="menu-button"><a href="menu.php?id=bites">Bites</a></li>
+					<li class="menu-button"><a href="menu.php?id=cocktails">Cocktails</a></li>
 					<li class="menu-button"><a href="neighborhood.php">Neighborhood</a></li>
 				</ul>
 			</div>
