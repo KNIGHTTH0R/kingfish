@@ -1,112 +1,70 @@
+<?php require_once 'dbconnect.php'; ?>
 <?php
-
-	function getdbc() {
-		// $dbhost = 'mysql.kingfishcorvallis.com'; 
-		// $dbname = 'kingfishlounge';
-		// $dbuser = 'kingfishlounger@ip-208-113-156-25.dreamhost.com';
-		// $dbpass = 'squirrelfish5!~';
-		
-		$dbhost = 'mysql.kingfishcorvallis.com'; 
-		$dbname = 'kingfishlounge';
-		$dbuser = 'kingfishlounger';
-		$dbpass = 'squirrelfish5!~';
-
-		$mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname) or die("Could not connect to database");
-		return $mysqli; 
-	}
-
-	$adding = False;
-	$editing = False;
-	$deleting = False;
-	$url = "http://www.kingfishcorvallis.com/editting?menu=".$_GET['menu'];
-
-
-	if (!isset($_GET['action'])) {
-		header("Location: ". $url ."&action=editing");
-	} else if ($_GET['action'] == 'adding') {
-		$adding = True;
-	} else if ($_GET['action'] == 'editing') {
-		$editing = True;
-	} else if ($_GET['action'] == 'deleting') {
-		$deleting = True;
-	}
-
-	function topbit() {
-		if ($editing) {
-			echo "<h1>Editing</h1>";
-		}
-		if ($adding) {
-			echo "<h1>Adding</h1>";
-		}
-		if ($deleting) {
-			echo "<h1>Deleting</h1>";
-		}
 	
-		echo "<nav>";
-
-		if ($editing) {
-			echo "<span class='selected_action'>Edit</span>";
-		} else {
-			echo "<a href=".$url."&action=editing>Edit</a>";
-		}
-		if ($adding) {
-			echo "<span class='selected_action'>Add</span>";
-		} else {
-			echo "<a href=".$url."&action=adding>Add</a>";
-		}
-
-		if ($deleting) {
-			echo "<span class='selected_action'>Delete</span>";
-		} else {
-			echo "<a href=".$url."&action=deleting>Delete</a>";
-		}
-
-		echo "</nav>";
-
-		echo "<hr>";
+	if (isset($_GET['menu']) && !empty($_GET['menu']) && isset($_GET['action']) && !empty($_GET['action'])) {
+		$menu = mysqli_real_escape_string($mysqli, strip_tags($_GET['menu']));
+		$action = mysqli_real_escape_string($mysqli, strip_tags($_GET['action']));
+	} else {
+		header("Location: 404.php");
 	}
 
-
+	$url = "editing?menu=$menu";
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editing the <?=$_GET["menu"]?></title>
+	<title>Editing the <?php echo $menu; ?></title>
 </head>
 <body>
 
 
 <?php
+	
+	$actions = ['editing', 'adding', 'deleting'];
+	switch ($action) {
+		case 'editing': 
+		case 'adding':
+		case 'deleting': 
+			echo "<h1>".ucfirst($action)."</h1>";
+			echo "<nav>";
+			foreach ($actions as $oaction) {
+				if ($action != $oaction) {
+					echo "<a href='$url&action=$oaction'>$oaction</a>";
+				} else {
+					echo "<span class='selected_action'>$action</span>";
+				}	
+			}
+			echo "</nav>";
+			echo "<hr>";
+			break;
+		default: header("Location: 404.php");
+	}
 
-	// $dbhost = 'mysql.kingfishcorvallis.com'; 
-	// $dbname = 'kingfishlounge';
-	// $dbuser = 'kingfishlounger';
-	// $dbpass = 'squirrelfish5!~';
 
-
-	topbit();
-
-
-	if ($editting) {
+	if ($action == 'editing') {
 		// This form is for edditing
-		$dbc = getdbc();
+		$dbc = $mysqli;
+		$menu = mysqli_real_escape_string($mysqli, strip_tags($_GET['menu']));
+		switch ($menu) {
+			case 'bites': $id = 'bid'; break;
+			case 'drinks': $id = 'did'; break;
+			default: header("Location: 404.php");
+		}
 		$sql = "SELECT * FROM kingfishlounge.".$_GET['menu']."";
 		$query = mysqli_query($dbc, $sql);
 		
 		echo "<form action='editting.php?menu=".$_GET['menu']."&action=editing' method='POST'>";
 		while ($row = mysqli_fetch_assoc($query)) {
-			echo "<label>" . $row['id'] . "<label>"
-			echo "<input type='text' name='name" . $row['id'] . "' value='" . $row['name'] ."'>";
-			echo "<input type='text' name='decs" . $row['id'] . "' value='" .$row['desc'] . "'>";
-			echo "<input type='text' name='price" . $row['id'] . "' value='" . $row['price'] . "'><br>";
+			echo "<label>" . $row["$id"] . "</label>";
+			echo "<input type='text' name='name" . $row["$id"] . "' value='" . $row['name'] ."'>";
+			echo "<input type='text' name='decs" . $row["$id"] . "' value='" .$row['desc'] . "'>";
+			echo "<input type='text' name='price" . $row["$id"] . "' value='" . $row['price'] . "'><br>";
 		}
-		echo "<input type='submit'>"
+		echo "<input type='submit'>";
 		echo "</form>";
-	}
-
-	if ($adding) {
+	} else if ($action == 'adding') {
 		// This is the add form 
 		echo "<form action='editting.php?menu=bites&action=adding' method='POST''>";
 			echo "<input type='text' name='name'>";
@@ -114,15 +72,9 @@
 			echo "<input type='text' name='price'>";
 			echo "<input type='submit' value='add'";
 		echo "</form>";
-	}
-
-	if ($deleting) {
+	} else if ($action == 'deleting') {
 		// This is the form for deleting
 	}
-
-
-	
-	
 
 ?>
 
