@@ -8,14 +8,27 @@
 		header("Location: 404.php");
 	}
 
-	$url = "editing?menu=$menu";
+	$url = "editing?menu=$menu&action=editing";
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editing the <?php echo $menu; ?></title>
+	<title>Editing the <?php echo ucfirst($menu); ?></title>
+	<style type="text/css" media="screen">
+		nav a, nav span {
+			padding-right: 5px;
+		}
+		
+		.selected_action {
+			font-weight: bold;
+		}
+		
+		.other_action {
+			color: #cb3737;
+		}
+	</style>
 </head>
 <body>
 
@@ -31,7 +44,7 @@
 			echo "<nav>";
 			foreach ($actions as $oaction) {
 				if ($action != $oaction) {
-					echo "<a href='$url&action=$oaction'>$oaction</a>";
+					echo "<a href='$url&action=$oaction' class='other_action'>$oaction</a>";
 				} else {
 					echo "<span class='selected_action'>$action</span>";
 				}	
