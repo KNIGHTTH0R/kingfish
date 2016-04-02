@@ -1,12 +1,16 @@
 <?php include_once 'header.php'; //header.php: <html> <head> <body> <div class='content'> ?>
 <?php
 
-	$type = mysqli_real_escape_string($mysqli, strip_tags($_GET['id']));
+	if (isset($_GET['id']) && !empty($_GET['id'])) {
+		$type = mysqli_real_escape_string($mysqli, strip_tags($_GET['id']));
+	} else {
+		header("Location: 404.php");
+	}
 	
 	switch ($type) {
 		case 'bites': break;
 		case 'cocktails': $type = 'drinks'; break;
-		default: header("Location: 404.php");
+		default: break;
 	}	
 	
 ?>
