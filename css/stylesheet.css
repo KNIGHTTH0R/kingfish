@@ -28,11 +28,6 @@ p {
 	background-color: #cb3737;
 }
 
-#background-video {
-	width: 100%;
-	z-index: 0;
-}
-
 .navbar-nav {
 	font-weight: 600;
 }
@@ -42,7 +37,6 @@ p {
 }
 
 a {
-/* 	color: #741d13; */
 	color: #cb3737;
 }
 
@@ -55,7 +49,6 @@ a:hover {
 }
 
 .navbar {
-/* 	background-color: rgba(255,  255,  255, 0.40); */
 	border-radius: 0;
 }
 
@@ -63,8 +56,6 @@ a:hover {
 	position: fixed;
 	top: -75px;
 	width: auto;
-	height: 115%;
-	overflow: hidden;
 	background: #2c1b0b;
 	z-index: -10;
 	left: 0px;
@@ -73,6 +64,13 @@ a:hover {
 #landingImage {
 	opacity: 0.70;
 	width: auto;
+	height: auto;
+}
+
+#landingLogo {
+	z-index: 10;
+	width: 100%;
+	height: auto;
 }
 
 /***************** FOOTER *******************/
