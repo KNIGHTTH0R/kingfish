@@ -41,3 +41,6 @@
 		</nav>
 	</header>
 	<div class="content container">
+		<div class="imageContainer">
+			<img id="landingImage" src="img/lights.png">
+		</div>
