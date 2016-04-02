@@ -65,15 +65,20 @@
 			case 'drinks': $id = 'did'; break;
 			default: header("Location: 404.php");
 		}
-		$sql = "SELECT * FROM kingfishlounge.".$_GET['menu']."";
+		$sql = "SELECT * FROM kingfishlounge.$menu";
 		$query = mysqli_query($dbc, $sql);
 		
-		echo "<form action='editting.php?menu=".$_GET['menu']."&action=editing' method='POST'>";
+		echo "<form action='editting.php?menu=$menu&action=editing' method='POST'>";
 		while ($row = mysqli_fetch_assoc($query)) {
-			echo "<label>" . $row["$id"] . "</label>";
-			echo "<input type='text' name='name" . $row["$id"] . "' value='" . $row['name'] ."'>";
-			echo "<input type='text' name='decs" . $row["$id"] . "' value='" .$row['desc'] . "'>";
-			echo "<input type='text' name='price" . $row["$id"] . "' value='" . $row['price'] . "'><br>";
+			$rid = $row["$id"];
+			$name = $row['name'];
+			$desc = $row['desc'];
+			$price = $row['price'];
+			
+			echo "<label>$rid</label>";
+			echo "<input type='text' name='name$rid' value='$name'>";
+			echo "<input type='text' name='decs$rid' value='$desc'>";
+			echo "<input type='text' name='price$rid' value='$price'><br>";
 		}
 		echo "<input type='submit'>";
 		echo "</form>";
