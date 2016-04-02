@@ -5,7 +5,7 @@
 		<img id="landingImage" src="img/lights.png">
 	</div>
 
-	<!-- map -->
+	<div id="map"></div>
 
 
 <?php include_once 'footer.php' ?>

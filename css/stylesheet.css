@@ -123,4 +123,11 @@ footer #contact-info #contact-details ul li {
 	width: 90%;
 }
 
+/***************** MAP *******************/
 
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
