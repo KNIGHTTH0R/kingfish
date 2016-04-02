@@ -67,6 +67,12 @@ a:hover {
 	height: auto;
 }
 
+#landingLogo {
+	z-index: 10;
+	width: 100%;
+	height: auto;
+}
+
 /***************** FOOTER *******************/
 
 footer {
