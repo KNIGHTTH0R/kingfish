@@ -73,45 +73,41 @@ a:hover {
 #landingImage {
 	opacity: 0.70;
 	width: auto;
-	height: 100%;
-}
-
-.content {
-	height: 70%;
 }
 
 /***************** FOOTER *******************/
 
-#footer {
+footer {
+	clear: both;
 	margin-right: 5%;
 	padding: 0;
 	position: relative;
 	top: 10%;
 }
 
-#footer a {
+footer a {
 	color: white;
 }
 
-#footer #hours {
+footer #hours {
 	float: right;
 	text-align: center;
 }
 
-#footer ul li {
+footer ul li {
 	list-style: none;
 }
 
-#footer #all-hours {
+footer #all-hours {
 	display: none;
 }
 
-#footer #contact-info {
+footer #contact-info {
 	text-align: left;
 	float: left;
 }
 
-#footer #contact-info #contact-details ul li {
+footer #contact-info #contact-details ul li {
 	display: inline;
 }
 

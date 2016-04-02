@@ -3,6 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>King Fish Lounge</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -13,25 +16,27 @@
 </head>
 <body>
 	<!-- nav bar -->
-	<nav class="navbar navbar-transparent">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-menu" aria-expanded="false">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.php">Kingfish Lounge</a>
+	<header>
+		<nav class="navbar navbar-transparent">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-menu" aria-expanded="false">
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.php">Kingfish Lounge</a>
+				</div>
+					<div class="collapse navbar-collapse" id="site-menu">
+						<ul class="nav navbar-nav navbar-right" id="site-menu">
+						<!-- <li><a href="#">About</a></li> -->
+						<li class="menu-button"><a href="menu.php?id=bites">Bites</a></li>
+						<li class="menu-button"><a href="menu.php?id=cocktails">Cocktails</a></li>
+						<li class="menu-button"><a href="neighborhood.php">Neighborhood</a></li>
+					</ul>
+				</div>
 			</div>
-				<div class="collapse navbar-collapse" id="site-menu">
-					<ul class="nav navbar-nav navbar-right" id="site-menu">
-					<!-- <li><a href="#">About</a></li> -->
-					<li class="menu-button"><a href="menu.php?id=bites">Bites</a></li>
-					<li class="menu-button"><a href="menu.php?id=cocktails">Cocktails</a></li>
-					<li class="menu-button"><a href="neighborhood.php">Neighborhood</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+		</nav>
+	</header>
 	<div class="content container">

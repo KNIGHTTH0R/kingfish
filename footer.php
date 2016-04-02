@@ -1,5 +1,5 @@
 </div> <!-- END CONTENT -->
-<div id="footer">
+<footer>
 
 	<div id="hours">
 		<ul id="todays-hours">
@@ -26,7 +26,7 @@
 		</ul>
 	</div>
 
-</div>
+</footer>
 
 <!-- INCLUDE LATEST JQUERY -->
 <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
