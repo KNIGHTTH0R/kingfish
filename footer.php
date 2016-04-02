@@ -38,7 +38,9 @@
 	$(document).ready(function() {
 		
 		//Toggle all hours
-	    $("#all-hours-button").click(function() {
+	    $("#all-hours-button").click(function(e) {
+		    e.preventDefault();
+		    $("html, body").animate({ scrollTop: $(document).height() }, "slow"); //© Mark Ursino & xaxxon @ http://stackoverflow.com/questions/1890995/jquery-scroll-to-bottom-of-page-iframe 
 		    $("#all-hours").toggle();
 	    });
 	    
