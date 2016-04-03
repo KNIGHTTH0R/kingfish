@@ -150,10 +150,12 @@ footer #contact-info #contact-details ul li {
 }
 
 .offerings {
+/*
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 90%;
+*/
+	width: 100%;
 }
 
 /***************** MAP *******************/
@@ -181,10 +183,20 @@ footer #contact-info #contact-details ul li {
 	text-align: center;
 }
 
-@media (max-width: 400px) {
+/***************** MOBILE *******************/
+
+@media (max-width: 650px) {
 	
 	.menu_right {
 		display: none;
+	}
+	
+	#map, #map_info {
+		display: block;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
 	}
 	
 }
