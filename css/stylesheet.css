@@ -56,13 +56,13 @@ a:hover {
 	position: fixed;
 	top: -75px;
 	width: auto;
-	background: #2c1b0b;
+	background: #2c160b;
 	z-index: -10;
 	left: 0px;
 }
 
 #landingImage {
-	opacity: 0.70;
+	opacity: 0.30;
 	width: auto;
 	height: auto;
 }
