@@ -126,10 +126,24 @@ footer #contact-info #contact-details ul li {
 /***************** MAP *******************/
 
 #map {
-	position: relative;
-	top: 0;
-	bottom: 0;
-	margin: 50px;
-	width: 60%;
-	height: 40%;
+	width: 40%;
+	height: 500px;
+	border: 0;
+	margin-right: 10%;
+}
+
+#map_info {
+	width: 40%;
+	height: 500px;
+	background-color: white;
+}
+
+#map, #map_info {
+	display: inline-block;
+}
+
+#map_data_container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
