@@ -73,14 +73,25 @@ a:hover {
 	height: auto;
 }
 
+.content {
+	min-height: 100%;
+	margin-bottom: -70px;
+}
+
+.content:after {
+	content: "";
+	display: block;
+}
+
 /***************** FOOTER *******************/
 
+footer, .content:after {
+	height: 70px;
+	
+}
+
 footer {
-	clear: both;
-	margin-right: 5%;
-	padding: 0;
-	position: relative;
-	top: 10%;
+	margin-right: 40px;
 }
 
 footer a {
