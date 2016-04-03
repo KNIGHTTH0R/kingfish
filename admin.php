@@ -4,9 +4,9 @@
 ?>
 
 
-<form>
-	<label>Username: </label><input type="text" name="user">
-	<label>Password: </label><input type="password" name="pass">
+<form action="admin.php" method="POST">
+	<label>Username: </label><input type="text" name="user"><br>
+	<label>Password: </label><input type="password" name="pass"><br>
 	<input type="submit" value="log in">
 </form>
 

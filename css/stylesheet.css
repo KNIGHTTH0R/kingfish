@@ -79,6 +79,15 @@ td {
 	padding: 5px;
 }
 
+table {
+	font-size: 13pt;
+}
+
+.drink {
+	
+	font-size: 14pt;
+}
+
 .menu_center {
 	text-align: center;
 }
