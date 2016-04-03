@@ -56,13 +56,13 @@ a:hover {
 	position: fixed;
 	top: -75px;
 	width: auto;
-	background: #2c160b;
+	background: #2c1b0b;
 	z-index: -10;
 	left: 0px;
 }
 
 #landingImage {
-	opacity: 0.30;
+	opacity: 0.70;
 	width: auto;
 	height: auto;
 }
@@ -84,7 +84,6 @@ table {
 }
 
 .drink {
-	
 	font-size: 14pt;
 }
 
