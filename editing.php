@@ -9,8 +9,9 @@
 	}
 
 	$url = "editing.php?menu=$menu";
-	
 
+
+	// This is what Cramer took that databases class for
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($action == 'adding') {
 			// adding to the database 
