@@ -73,6 +73,20 @@ a:hover {
 	height: auto;
 }
 
+/****************** MENU ********************/
+
+td {
+	padding: 5px;
+}
+
+.menu_center {
+	text-align: center;
+}
+
+.menu_right {
+	text-align: right;
+}
+
 /***************** FOOTER *******************/
 
 footer {

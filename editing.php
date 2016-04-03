@@ -9,7 +9,7 @@
 	}
 
 	$url = "editing.php?menu=$menu";
-
+	
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($action == 'adding') {
@@ -37,6 +37,8 @@
 				default: header("Location: 404.php");
 			} 
 
+			$fail = False;
+
 			while ($row = mysqli_fetch_assoc($querys)) {
 				$newname = mysqli_real_escape_string($mysqli, strip_tags($_POST["name_" . $row[$id]]));
 				$newdecs = mysqli_real_escape_string($mysqli, strip_tags($_POST["decs_" . $row[$id]]));
@@ -48,16 +50,16 @@
 						 WHERE $id=$row[$id]";
 				$edited = mysqli_query($mysqli, $sqls);
 				//echo $sql . "<br>";
-				if ($edited) {
-					echo "<strong>Success:</strong> " . $sqls . "<br>";
+				if (!$edited) {
+					$failmessage = $sql;
+					break;
 				}
 			}
-
-			//var_dump($_POST);
-			
-				
-			
-
+			if ($fail) {
+				echo "<label> class='red'>FAIL: </label>" . $sql;
+			} else {
+				echo "<label class='green'>Success</label>";
+			}
 
 		} else if ($action == 'deleting') { 
 			// deleting from the database 
@@ -102,6 +104,16 @@
 		}
 
 		.toprow {
+			font-weight: bold;
+		}
+
+		.red {
+			color: red;
+			font-weight: bold;
+		}
+
+		.green {
+			color: #00FF00;
 			font-weight: bold;
 		}
 	</style>

@@ -24,19 +24,20 @@
 		<?php 	
 			$sql = "SELECT * FROM $type ORDER BY priority";
 			$query = mysqli_query($mysqli, $sql);
-			if ($query) echo "<ul class='offerings'>";
+			if ($query) echo "<table class='offerings'>";
 			while ($row = mysqli_fetch_assoc($query)) {
 				$name = mysqli_real_escape_string($mysqli, strip_tags($row['name']));
 				$desc = mysqli_real_escape_string($mysqli, strip_tags($row['desc']));
 				$price = mysqli_real_escape_string($mysqli, strip_tags($row['price']));
-				
+				echo "<tr>";
 				if ($desc == NULL) {
-					echo "<li class='drink'> " . stripslashes($name) . " | $$price</li>";
+					echo "<td class='drink'> " . stripslashes($name) . "<td></td></td> <td class='menu_center'> $$price</td>";
 				} else {
-					echo "<li class='drink'> " . stripslashes($name) . " | " . stripslashes($desc) . " | $$price</li>";
+					echo "<td class='drink'> " . stripslashes($name) . "</td> <td class='menu_right'>  " . stripslashes($desc) . "</td> <td class='menu_center'> $$price</td>";
 				}
+				echo "<tr>";
 			}
-			if ($query) echo "</ul>"; 			
+			if ($query) echo "</table>"; 			
 		?>
 	</div>
 <?php include_once 'footer.php'; //footer.php: </div>(class='content') <script> </body> </html> ?>
