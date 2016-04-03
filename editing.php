@@ -111,12 +111,14 @@
 
 <?php
 	
+
+
 	$actions = ['editing', 'adding', 'deleting'];
 	switch ($action) {
 		case 'editing': 
 		case 'adding':
 		case 'deleting': 
-			echo "<h1>".ucfirst($action)."</h1>";
+			echo "<h1>".ucfirst($action) . " " . ucfirst($menu) . "</h1>";
 			echo "<nav>";
 			foreach ($actions as $oaction) {
 				if ($action != $oaction) {
@@ -126,11 +128,27 @@
 				}	
 			}
 			echo "</nav>";
-			echo "<hr>";
 			break;
 		default: header("Location: 404.php");
 	}
 
+	$menus = ['bites', 'drinks'];
+	switch ($menu) {
+		case 'bites': 
+		case 'drinks':
+			echo "<nav>";
+			foreach ($menus as $omenu) {
+				if ($menu != $omenu) {
+					echo "<a href='editing.php?menu=$omenu&action=$action' class='other_action'>$omenu</a>";
+				} else {
+					echo "<span class='selected_action'>$menu</span>";
+				}	
+			}
+			echo "</nav>";
+			echo "<hr>";
+			break;
+		default: header("Location: 404.php");
+	}
 
 	if ($action == 'editing') {
 		// This form is for edditing
@@ -149,19 +167,21 @@
 		echo "<tr class='toprow'><td>ID</td> <td>Name</td> <td>Description</td> <td>Price</td> <td>Priority</td> <td></td></tr>";
 		while ($row = mysqli_fetch_assoc($query)) {
 			$rid = $row["$id"];
-			$name = $row['name'];
+			$name = ($row['name']);
 			$desc = $row['desc'];
 			$price = $row['price'];
 			$priority = $row['priority'];
-			echo "<tr>";
-			echo "<td><label>$rid</label>";
-			echo "<td><input type='text' name='name $rid' value='$name'></td>";
-			echo "<td><input type='text' name='decs $rid' value='$desc'></td>";
-			echo "<td><input type='number' name='price $rid' value='$price'></td>";
-			echo "<td><input type='number' name='priority $rid' value='$priority'></td>";
-			echo "</tr>";
+			//echo '<td><input type=\"text\" name=\"name\" ' . $rid . ' value=' . $name . '></td>';
+			?>
+			<tr>
+				<td><label><?=$rid?></label>
+				<td><input type="text" name="name <?=$rid?>" value="<?=$name?>"></td>
+				<td><input type="text" name='decs <?=$rid?>' value="<?=$desc?>"></td>
+				<td><input type='number' name="price <?=$rid?>" value="<?=$price?>"></td>
+				<td><input type='number' name='priority <?=$rid?>' value="<?=$priority?>"></td>
+			</tr>
+			<?php
 		}
-		
 		echo "<tr><td><input type='submit'><tf></tr>";
 		echo "</table";
 		echo "</form>";

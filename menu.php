@@ -20,10 +20,8 @@
 	</div>
 	
 	<div class="offerings">
-
 		<!-- Drink menu -->
-		<?php 
-			
+		<?php 	
 			$sql = "SELECT * FROM $type ORDER BY priority";
 			$query = mysqli_query($mysqli, $sql);
 			if ($query) echo "<ul class='offerings'>";
@@ -33,15 +31,12 @@
 				$price = mysqli_real_escape_string($mysqli, strip_tags($row['price']));
 				
 				if ($desc == NULL) {
-					echo "<li class='drink'>$name | $$price</li>";
+					echo "<li class='drink'> " . stripslashes($name) . " | $$price</li>";
 				} else {
-					echo "<li class='drink'>$name | $desc | $$price</li>";
+					echo "<li class='drink'> " . stripslashes($name) . " | " . stripslashes($desc) . " | $$price</li>";
 				}
 			}
-			if ($query) echo "</ul>"; 
-			
+			if ($query) echo "</ul>"; 			
 		?>
-
 	</div>
-
 <?php include_once 'footer.php'; //footer.php: </div>(class='content') <script> </body> </html> ?>
