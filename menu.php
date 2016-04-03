@@ -14,10 +14,6 @@
 	}	
 	
 ?>
-
-	<div class="imageContainer">
-		<img id="landingImage" src="img/lights.png">
-	</div>
 	
 	<div class="offerings">
 		<!-- Drink menu -->

@@ -85,16 +85,27 @@ td {
 
 .menu_right {
 	text-align: right;
+} 
+
+.content {
+	min-height: 90%;
+	margin-bottom: -70px;
+}
+
+.content:after {
+	content: "";
+	display: block;
 }
 
 /***************** FOOTER *******************/
 
+footer, .content:after {
+	height: 70px;
+}
+
 footer {
-	clear: both;
-	margin-right: 5%;
-	padding: 0;
-	position: relative;
-	top: 10%;
+	margin-right: 40px;
+	vertical-align: bottom;
 }
 
 footer a {
@@ -137,4 +148,27 @@ footer #contact-info #contact-details ul li {
 	width: 90%;
 }
 
+/***************** MAP *******************/
 
+#map {
+	width: 40%;
+	height: 500px;
+	border: 0;
+	margin-right: 10%;
+}
+
+#map_info {
+	width: 40%;
+	height: 500px;
+	background-color: white;
+}
+
+#map, #map_info {
+	display: inline-block;
+}
+
+#map_data_container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
