@@ -94,7 +94,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editing the <?php echo ucfirst($menu); ?></title>
+	<title><?php echo ucfirst($action) ." ". ucfirst($menu); ?></title>
 	<style type="text/css" media="screen">
 		nav a, nav span {
 			padding-right: 5px;
