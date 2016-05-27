@@ -69,8 +69,11 @@ a:hover {
 
 #landingLogo {
 	z-index: 10;
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 80vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 .content {
@@ -123,6 +126,10 @@ footer a {
 footer #hours {
 	float: right;
 	text-align: right;
+}
+
+footer #all-hours-button {
+	vertical-align: top;
 }
 
 footer ul li {
@@ -185,6 +192,13 @@ footer #contact-info #contact-details ul li {
 
 /***************** MOBILE *******************/
 
+@media (max-width: 1000px) {
+	#landingLogo {
+		width: 100%;
+		height: auto;
+	}
+}
+
 @media (max-width: 650px) {
 	
 	.menu_right {
@@ -198,5 +212,4 @@ footer #contact-info #contact-details ul li {
 		margin-right: auto;
 		margin-bottom: 20px;
 	}
-	
 }
