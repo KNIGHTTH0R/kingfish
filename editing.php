@@ -1,6 +1,10 @@
 <?php require_once 'dbconnect.php'; ?>
 <?php
 	
+	if (!isset($_SESSION['username'])) {
+		header("Location: index.php");
+	}
+	
 	if (isset($_GET['menu']) && !empty($_GET['menu']) && isset($_GET['action']) && !empty($_GET['action'])) {
 		$menu = mysqli_real_escape_string($mysqli, strip_tags($_GET['menu']));
 		$action = mysqli_real_escape_string($mysqli, strip_tags($_GET['action']));
@@ -177,7 +181,7 @@
 		
 		echo "<form action='$url&action=editing' method='POST'>";
 		echo "<table>";
-		echo "<tr class='toprow'><td>ID</td> <td>Name</td> <td>Description</td> <td>Price</td> <td>Priority</td> <td></td></tr>";
+		echo "<tr class='toprow'><td>ID</td> <td>Name</td> <td>Description</td> <td>Price</td> <td>Order</td> <td></td></tr>";
 		while ($row = mysqli_fetch_assoc($query)) {
 			$rid = $row["$id"];
 			$name = ($row['name']);
@@ -215,7 +219,7 @@
 		
 		echo "<form action='$url&action=deleting' method='POST'>";
 		echo "<table>";
-		echo "<tr class='toprow'><td>ID</td> <td>Name</td> <td>Description</td> <td>Price</td> <td>Priority</td> <td></td></tr>";
+		echo "<tr class='toprow'><td>ID</td> <td>Name</td> <td>Description</td> <td>Price</td> <td>Order</td> <td></td></tr>";
 		while ($row = mysqli_fetch_assoc($query)) {
 			switch ($menu) {
 				case 'bites': $id = 'bid'; break;
