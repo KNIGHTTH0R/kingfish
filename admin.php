@@ -1,37 +1,31 @@
 <?php include_once 'header.php'; 
 	
-	if (isset($_POST['username'])) {
+	// * WARNING * THIS COULD BE A SECURITY RISK
+	if (isset($_SESSION["username"]) && isset($_SESSION["uid"]) && !empty($_SESSION["username"]) && !empty($_SESSION["uid"])) {
+		header("Location: editing.php?menu=bites&action=editing");
+	}
+	// END WARNING
+	
+	if (isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['password']) && !empty($_POST['password'])) {
 		
-		require_once 'password.php';
+		$username = mysqli_real_escape_string($mysqli, strip_tags($_POST["username"]));
+		$password = mysqli_real_escape_string($mysqli, strip_tags($_POST["password"]));
+				
+		$sql = "SELECT uid, username, password FROM users WHERE username=? LIMIT 1";
+		$stmt = mysqli_prepare($mysqli, $sql);
+		mysqli_stmt_bind_param($stmt, 's', $username);
+		mysqli_stmt_execute($stmt);
+		mysqli_stmt_bind_result($stmt, $uid, $dbusername, $dbpassword);
+		mysqli_stmt_fetch($stmt);
 		
-		$username = strip_tags($_POST["username"]);
-		$password = strip_tags($_POST["password"]);
-		
-		$username = mysqli_real_escape_string($mysqli, $username);
-		$password = mysqli_real_escape_string($mysqli, $password);
-		
-		$sql = "SELECT uid, username, password FROM users WHERE username='$username' LIMIT 1";
-		$query = mysqli_query($mysqli, $sql);
-		$row = mysqli_fetch_row($query);
-		
-		$uid = $row[0];
-		
-		$dbusername = $row[1];
-		
-		$dbpassword = $row[2];
-		
-		echo "HI";
 		//check username and password are correct
-		//if ($username == $dbUsername && password_verify($password."winkleer", $dbPassword)) {
-		if ($username == $dbusername && md5($password) == $dbpassword) {
+		if ($username == $dbusername && password_verify($password."kingfisher", $dbpassword)) {
 			//set session variables
-			echo "HI";
 			$_SESSION['username'] = $username;
 			$_SESSION['uid'] = $uid;
 			
 			//now redirect user
 			header("Location: editing.php?menu=bites&action=editing");
-			echo "AHHHH";
 		} else {
 			die( "<h2>Username/password not found. Please try again.</h2>" );
 		}
