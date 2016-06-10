@@ -10,7 +10,7 @@
 	switch ($type) {
 		case 'bites': break;
 		case 'cocktails': $type = 'drinks'; break;
-		default: break;
+		default: $type = 'drinks'; break;
 	}	
 	
 ?>
@@ -28,9 +28,9 @@
 					$price = mysqli_real_escape_string($mysqli, strip_tags($row['price']));
 					echo "<tr>";
 					if ($desc == NULL) {
-						echo "<td class='drink'> " . stripslashes($name) . "<td></td></td> <td class='menu_center'> $$price</td>";
+						echo "<td class='drink'>".stripslashes($name)."</td><td class='menu_right'></td><td class='menu_center'>$$price</td>";
 					} else {
-						echo "<td class='drink'> " . stripslashes($name) . "</td> <td class='menu_right'>  " . stripslashes($desc) . "</td> <td class='menu_center'> $$price</td>";
+						echo "<td class='drink'>".stripslashes($name)."</td><td class='menu_right'>".stripslashes($desc)."</td><td class='menu_center'>$$price</td>";
 					}
 					echo "<tr>";
 				}

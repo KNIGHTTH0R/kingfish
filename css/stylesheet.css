@@ -34,6 +34,7 @@ p {
 
 .navbar-brand, .navbar-nav li a {
 	text-shadow: none;
+	font-size: 13pt;
 }
 
 a {
@@ -55,16 +56,18 @@ a:hover {
 .imageContainer {
 	position: fixed;
 	top: -75px;
-	width: auto;
-	background: #2c1b0b;
+	height: 150%;
+	width: 200%;
+	background: #400e0e;
 	z-index: -10;
-	left: 0px;
+	left: -200px;
+	float: left;
 }
 
 #landingImage {
-	opacity: 0.70;
-	width: auto;
-	height: auto;
+	opacity: 0.40;
+	height: 100%;
+	width: 100%;
 }
 
 #landingLogo {

@@ -34,7 +34,7 @@
 						<!-- <li><a href="#">About</a></li> -->
 						<li class="menu-button"><a href="menu.php?id=bites">Bites</a></li>
 						<li class="menu-button"><a href="menu.php?id=cocktails">Cocktails</a></li>
-						<li class="menu-button"><a href="neighborhood.php">Neighborhood</a></li>
+<!-- 						<li class="menu-button"><a href="neighborhood.php">Neighborhood</a></li> -->
 					</ul>
 				</div>
 			</div>
@@ -42,5 +42,5 @@
 	</header>
 	<div class="content container">
 		<div class="imageContainer">
-			<img id="landingImage" src="img/lights.png">
+			<img id="landingImage" src="img/bar.jpg">
 		</div>
