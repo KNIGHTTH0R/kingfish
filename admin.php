@@ -1,6 +1,7 @@
 <?php include_once 'header.php'; 
 	
 	// * WARNING * THIS COULD BE A SECURITY RISK
+	// If you've logged in before, you will be redirected
 	if (isset($_SESSION["username"]) && isset($_SESSION["uid"]) && !empty($_SESSION["username"]) && !empty($_SESSION["uid"])) {
 		header("Location: editing.php?menu=bites&action=editing");
 	}
@@ -27,7 +28,7 @@
 			//now redirect user
 			header("Location: editing.php?menu=bites&action=editing");
 		} else {
-			die( "<h2>Username/password not found. Please try again.</h2>" );
+			die( "<h2 class='error'>Username/password not found. Please try again.</h2>" );
 		}
 	}	
 	

@@ -27,7 +27,7 @@
 					VALUE ('$newname', '$newdecs', '$newprice', '$newpriority')";
 			$query = mysqli_query($mysqli, $sql);
 			if ($query) {
-				echo "<strong>Success:</strong> $sql";
+				echo "<strong class='success'>Success!</strong>";
 			}
 
 		} else if ($action == 'editing') {
@@ -61,9 +61,9 @@
 				}
 			}
 			if ($fail) {
-				echo "<label> class='red'>FAIL: </label>" . $sql;
+				echo "<label class='error'>Error</label>";
 			} else {
-				echo "<label class='green'>Success</label>";
+				echo "<label class='success'>Success!</label>";
 			}
 
 		} else if ($action == 'deleting') { 
@@ -79,16 +79,12 @@
 					 WHERE $id='$todelete' ";
 			$query = mysqli_query($mysqli, $sql);
 			if ($query) {
-				echo "<strong>Success:</strong> $sql";
+				echo "<strong class='success'>Success!</strong>";
 			}
-
 		} else {
-			echo "none";
-		}
+			header("Location: 404.php");
+		} 
 	}
-
-
-
 ?>
 
 <!DOCTYPE html>
