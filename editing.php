@@ -54,7 +54,6 @@
 						 SET name='$newname', `desc`='$newdecs', price='$newprice', priority='$newpriority'
 						 WHERE $id=$row[$id]";
 				$edited = mysqli_query($mysqli, $sqls);
-				//echo $sql . "<br>";
 				if (!$edited) {
 					$failmessage = $sql;
 					break;
@@ -89,43 +88,14 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title><?php echo ucfirst($action) ." ". ucfirst($menu); ?></title>
-	<style type="text/css" media="screen">
-		nav a, nav span {
-			padding-right: 5px;
-		}
-		
-		.selected_action {
-			font-weight: bold;
-		}
-		
-		.other_action {
-			color: #cb3737;
-		}
-
-		.toprow {
-			font-weight: bold;
-		}
-
-		.red {
-			color: red;
-			font-weight: bold;
-		}
-
-		.green {
-			color: #00FF00;
-			font-weight: bold;
-		}
-	</style>
-</head>
+	<head>
+		<title><?php echo ucfirst($action) ." ". ucfirst($menu); ?></title>
+	</head>
 <body>
 
 
 <?php
 	
-
-
 	$actions = ['editing', 'adding', 'deleting'];
 	switch ($action) {
 		case 'editing': 
