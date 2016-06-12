@@ -193,6 +193,32 @@ footer #contact-info #contact-details ul li {
 	text-align: center;
 }
 
+/***************** Admin *******************/
+
+.title {
+	text-align: center;
+}
+
+#admin_form p {
+	display: block;
+}
+
+#admin_form input {
+	border: none;
+	border-radius: 3px;
+	text-align: center;
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#admin_form input[type="submit"] {
+	display: block;
+	color: #cb3737;
+	background-color: white;
+	font-weight: 600;
+}
+
 /***************** MOBILE *******************/
 
 @media (max-width: 1000px) {

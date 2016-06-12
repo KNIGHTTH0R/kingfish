@@ -33,12 +33,11 @@
 	
 ?>
 
-<h2>Admin menu</h2>
-<br>
-<form action="admin.php" method="POST">
-	Username: <input class="input_field" type="text" name="username" style="color: black;" required autofocus><br>
-	Password: <input class="input_field" type="password" name="password" style="color: black;"><br>
-	<input type="submit" value="Login"  style="color:#cb3737; font-weight: bold;">
+<h2 class="title">Admin menu</h2>
+<form id="admin_form" action="admin.php" method="POST">
+	<p>Username: <input class="input_field" type="text" name="username" required autofocus></p>
+	<p>Password: <input class="input_field" type="password" name="password"></p>
+	<input class="submit" type="submit" value="Login">
 </form>
 
 <?php include_once 'footer.php'; ?>
