@@ -235,24 +235,6 @@ footer #contact-info #contact-details ul li {
 	font-weight: 600;
 }
 
-/***************** EDITING *******************/
-
-nav a, nav span {
-	padding-right: 5px;
-}
-
-.selected_action {
-	font-weight: bold;
-}
-
-.other_action {
-	color: #cb3737;
-}
-
-.toprow {
-	font-weight: bold;
-}
-
 /***************** MOBILE *******************/
 
 @media (max-width: 1000px) {

@@ -88,9 +88,36 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<title><?php echo ucfirst($action) ." ". ucfirst($menu); ?></title>
-	</head>
+<head>
+	<title><?php echo ucfirst($action) ." ". ucfirst($menu); ?></title>
+	<style type="text/css" media="screen">
+		nav a, nav span {
+			padding-right: 5px;
+		}
+		
+		.selected_action {
+			font-weight: bold;
+		}
+		
+		.other_action {
+			color: #cb3737;
+		}
+
+		.toprow {
+			font-weight: bold;
+		}
+
+		.red {
+			color: red;
+			font-weight: bold;
+		}
+
+		.green {
+			color: #00FF00;
+			font-weight: bold;
+		}
+	</style>
+</head>
 <body>
 
 
@@ -203,9 +230,6 @@
 		echo "</table";
 		echo "</form>";
 	}
-
 ?>
-
-
 </body>
 </html>
