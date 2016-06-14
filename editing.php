@@ -1,6 +1,15 @@
 <?php require_once 'dbconnect.php'; ?>
 <?php
 	
+	// check last activity, if longer than 30 minutes ago, require login; if sooner, refresh token
+	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+		// last request was longer than 30 minutes ago
+		session_unset();
+		session_destroy();
+		header("Location: admin.php");
+	}
+	$_SESSION['LAST_ACTIVITY'] = time();
+	
 	if (!isset($_SESSION['username'])) {
 		header("Location: index.php");
 	}

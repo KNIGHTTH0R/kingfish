@@ -1,6 +1,13 @@
 <?php include_once 'header.php'; 
 	
-	// * WARNING * THIS COULD BE A SECURITY RISK
+	// check last activity, if longer than 30 minutes ago, require login; if sooner, refresh token
+	if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+		// last request was longer than 30 minutes ago
+		session_unset();
+		session_destroy();
+	}
+	$_SESSION['LAST_ACTIVITY'] = time();
+
 	// If you've logged in before, you will be redirected
 	if (isset($_SESSION["username"]) && isset($_SESSION["uid"]) && !empty($_SESSION["username"]) && !empty($_SESSION["uid"])) {
 		header("Location: editing.php?menu=bites&action=editing");
