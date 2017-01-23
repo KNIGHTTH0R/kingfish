@@ -15,7 +15,7 @@
 		 	<li id="thursday"> Thursday: <span class="time">5pm &ndash; 1am</span> </li>
 			<li id="friday"> Friday: <span class="time">5pm &ndash; 1am</span> </li>
 			<li id="saturday"> Saturday: <span class="time">5pm &ndash; 1am</span> </li>
-			<li id="sunday"> Sunday: <span class="time">Closed</span> </li>
+			<li id="sunday"> Sunday: <span class="time">5pm &ndash; 12am</span> </li>
 		</ul>
 	</div>
 
